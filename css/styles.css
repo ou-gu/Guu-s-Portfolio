@@ -1,0 +1,221 @@
+body {
+  margin: 0;
+  font-family: Verdana, sans-serif;
+  background-color: #fff;
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+header {
+  background-color: #f2f2f2;
+  display: flex;
+  padding: 0 16px;
+  justify-content: space-between;
+  height: 64px;
+}
+
+header img {
+  margin-top: 7px;
+  font-size: 22px;
+  height: 50px;
+}
+
+/* 携帯用ハンバーガーメニュー */
+.sp-menu {
+  margin-left: auto;
+}
+
+.sp-menu #open {
+  font-size: 32px;
+  line-height: 64px;
+  cursor: pointer;
+}
+
+/* jQeuryでcloseのを見せている間にopenを隠します */
+.sp-menu #open.hide {
+  display: none;
+}
+
+main {
+  padding: 0 16px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s;
+}
+ /* jQueryでshowクラスを付与してクリックできるようにします */
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.overlay ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay li {
+  margin-top: 24px;
+}
+/* 携帯用ハンバーガーメニュー */
+
+.mv {
+  position: relative;
+  height: 480px;
+  background: center center no-repeat;
+  background-image: url("../img/img02.jpg");
+  background-size: cover;
+}
+
+.mv-title {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.pc-menu {
+  display: none;
+}
+
+/* アバウトmeのコンテンツ */
+#about > h1 {
+  text-align: center;
+  padding: 64px 0;
+  font-weight: bold;
+}
+
+#about .container {
+  margin: 0 32px;
+}
+
+#about p {
+  line-height: 1.8;
+}
+
+#about section {
+  padding-bottom: 64px;
+}
+/* アバウトmeのコンテンツ */
+
+/* worksのコンテンツ */
+#wroks > h1 {
+  text-align: center;
+  padding: 64px 0;
+}
+
+#wroks ul {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#wroks li {
+  padding-bottom: 64px;
+}
+
+#wroks img {
+  width: 160px;
+}
+
+#wroks h2 {
+  font-size: 20px;
+}
+
+footer {
+  padding: 64px 0;
+  background: #b8dfe9;
+  text-align: center;
+  color: gray;
+}
+
+@media (min-width: 600px) {
+  .pc-menu {
+    display: block;
+    margin-right: 30px;
+  }
+
+  .pc-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .pc-menu a {
+    display: inline-block;
+    line-height: 64px;
+    width: 100px;
+    text-align: center;
+  }
+
+  .pc-menu a:hover {
+    background-color: #cccccc;
+  }
+
+  .sp-menu {
+    display: none;
+  }
+
+  #about .container {
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  #about section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #about section:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  #about .pic {
+    width: 50%;
+  }
+
+  #about .info {
+    width: calc(50% - 32px);
+  }
+
+  #wroks ul {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #wroks li {
+    width: 250px;
+  }
+
+}
