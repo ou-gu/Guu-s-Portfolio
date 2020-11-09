@@ -126,27 +126,28 @@ main {
 /* アバウトmeのコンテンツ */
 
 /* worksのコンテンツ */
-#wroks > h1 {
+#works > h1 {
   text-align: center;
   padding: 64px 0;
 }
 
-#wroks ul {
+#works ul {
   list-style: none;
   text-align: center;
   margin: 0;
   padding: 0;
 }
 
-#wroks li {
+#works li {
   padding-bottom: 64px;
 }
 
-#wroks img {
+#works img {
   width: 160px;
+  height: 160px;
 }
 
-#wroks h2 {
+#works h2 {
   font-size: 20px;
 }
 
